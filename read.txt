@@ -1,0 +1,4 @@
+﻿modifi : js/customer-layout-js.php , config/request.php ,
+         controller/controller.php,database/connection.php
+add : config/ControllerConfiguration.php
+delete : config/config.php
