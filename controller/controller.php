@@ -9,11 +9,12 @@
 class controller
 {
     public $DB;
-    public function controller($dir)
+
+    public function controller()
     {
         $this->DB = [];
-        include $dir.'database/connection.php';
-        foreach (glob($dir."model/*.php") as $path) {
+        include '../database/connection.php';
+        foreach (glob("../model/*.php") as $path) {
             include $path;//include các class model vào
             $table_name = pathinfo($path)["filename"];//tên model
             $this->DB[$table_name] = new $table_name($db);//khởi tạo model

@@ -1,0 +1,10 @@
+<?php
+/*define("__DB_NAME","machine-shop");
+define("__USER_NAME","root");
+define("__PASS","");
+define("__PREFIX","ms_");*/
+/*
+define("__DB_NAME","lfbxgfjhosting_machine_shop");
+define("__USER_NAME","lfbxgfjhosting_hanhnguyen");
+define("__PASS","Space0time0db");
+define("__PREFIX","ms_");*/

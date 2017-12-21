@@ -1,7 +1,7 @@
 <?php
 //
 //define("__ROOT_DIR", "machine-shop");
-define("__ROOT_URI", "http://".$_SERVER["HTTP_HOST"]."/machine-shop/");
+define("__ROOT_URI", "http://".$_SERVER["HTTP_HOST"]."/");
 //all role
 //define("__ADMIN", "ADMIN");
 //define("__CUS", "CUS");
