@@ -1,0 +1,60 @@
+<style>
+    .promotionals {
+        padding: 5px;
+    }
+    .promotionals .item  {
+        padding: 10px;
+        padding-bottom: 14px;
+        margin-bottom: 16px;
+        position: relative;
+    }
+    .promotionals .item .title {
+        font-size:20px;
+        font-weight: bold;
+    }
+
+    .promotionals .item .des {
+        overflow: hidden;
+    }
+    .promotionals .item .des ol,.promotionals .item .des ul{
+        padding-left: 20px;
+    }
+    .promotionals .item .des.excerpt {
+        height: 60px;
+    }
+    .promotionals .item .details {
+        margin-top: 5px;
+        font-size: 22px;
+        cursor: pointer;
+        color:#39c;
+        position: absolute;
+        left:10px;
+        bottom: -18px;
+    }
+    .promotionals .item .date {
+        color:#777777;
+        font-size: 12px;
+    }
+    .promotionals .item .des + .details .glyphicon-plus {
+        display: none;
+    }
+    .promotionals .item .des.excerpt + .details .glyphicon-plus {
+        display: block !important;
+    }
+    .promotionals .item .des.excerpt + .details .glyphicon-minus {
+        display: none !important;
+    }
+
+
+    .promotionals p.read-more {
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        background: #fff;
+        border-top: 1px solid rgba(128, 128, 128, 0.29);
+    }
+
+    .promotionals p.read-more:hover {
+        background: #dbf4ff;
+    }
+</style>

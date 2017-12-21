@@ -1,0 +1,49 @@
+<div class="add-photo-content" ng-controller="add_photo">
+    <p class="nav-link">
+        <a href="admin/">Quản trị</a> - <a href="admin/add-photo.php">Thêm hình</a>
+    </p>
+    <div class="main-content">
+        <div class="add-photo table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <td>STT</td>
+                    <td>Hình thu nhỏ</td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in photos" data-id="{{item.id}}">
+                    <td>{{$index}}</td>
+                    <td>
+                        <div class="thumbnail"><img src="{{item.url}}" alt=""></div>
+                    </td>
+
+                    <td  class="action">
+                        <a href="config/request.php?c=image&ac=del_photo&tb={{context_tb}}&id={{item.id}}&ctx_id={{context_id}}">
+                            <span class="trash-item glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <form method="post" class="submit-form" data-controller="image" data-action="add_photo">
+                <input  type="hidden" value="{{context_id}}" name="id"/>
+                <input  type="hidden" value="{{context_tb}}" name="tb"/>
+
+                <div class="col-xs-8 col-sm-4">
+                    <div class="thumbnail">
+                        <img class="show_pic" src="" alt="">
+                        <input class="txtpic" type="hidden" name="txtpic"/>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <button data-this="show_pic&txtpic"  data-current-click="" data-target="choose-pic"
+                        class="btn-sel-pic btn-popup btn btn-primary" type="button">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                <button class="btn btn-success" type="submit">Lưu</button>
+            </form>
+        </div>
+    </div>
+</div>

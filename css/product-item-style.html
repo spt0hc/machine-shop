@@ -1,0 +1,131 @@
+<style>
+    .product-item {
+        width: 240px;
+        margin: 0 auto;
+    }
+
+    .product-item p.name {
+        color:#39c;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .product-item .thumbnail {
+        width: 100%;
+        height: 240px;
+        border: none;
+        overflow: hidden;
+    }
+
+    .product-item .thumbnail img {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .product-item > p {
+        padding: 4px;
+    }
+
+    .product-item p.price {
+        width:80%;
+        background: #39c;
+        color: #fff;
+        position: relative;
+    }
+    .product-item p.price:after {
+        content:'';
+        position: absolute;
+        bottom:0;
+        right:-28px;
+        border:14px solid #307da4;
+        border-top-color: transparent;
+        border-right-color: transparent;
+    }
+
+    .product-item p.cart {
+        font-size: 20px;
+        height: 20px;
+    }
+
+    .product-item p.cart span:not(.off) {
+        float: right;
+        margin-right: 2px;
+    }
+
+    .product-item p.cart span.off {
+        line-height: 18px;
+        color: #ff4040;
+
+    }
+
+    .product-item p.cart span {
+        cursor: pointer;
+    }
+
+    .product-item p:last-child {
+        text-align: center;
+        font-size: 24px;
+        border-top: 1px solid rgba(247, 247, 247, 0.43);
+        height: 34px;
+        line-height: 34px;
+    background: #404342;
+    }
+
+    .product-item p:last-child span {
+        color: white;
+    }
+    .product-item p:last-child span.btn-add-cart {
+        background: #39c;
+        color:white;
+        padding: 10px;
+        border-radius: 100%;
+        margin-top: -20px;
+        cursor: pointer;
+        animation: call 1s ease-out infinite alternate;
+        -o-animation: call 1s ease-out infinite alternate;
+        -moz-animation: call 1s ease-out infinite alternate;
+        -webkit-animation: call 1s ease-out infinite alternate;
+    }
+    @keyframes call {
+        from { box-shadow: 0 0 1px 1px #39C;}
+        to{ box-shadow: 0 0 6px 2px rgba(186,232,255,0.41)}
+    }
+    @-webkit-keyframes call {
+        from { box-shadow: 0 0 1px 1px #39C;}
+        to{ box-shadow: 0 0 6px 2px rgba(186,232,255,0.41)}
+    }
+    @-moz-keyframes call {
+        from { box-shadow: 0 0 1px 1px #39C;}
+        to{ box-shadow: 0 0 6px 2px rgba(186,232,255,0.41)}
+    }
+    @-o-keyframes call {
+        from { box-shadow: 0 0 1px 1px #39C;}
+        to{ box-shadow: 0 0 6px 2px rgba(186,232,255,0.41)}
+    }
+    .product-item p:last-child span:first-child {
+    color:#f9f9b2;
+    animation:view-light 1s ease-in infinite alternate;
+    -webkit-animation:view-light 1s ease-in infinite alternate;
+    -moz-animation:view-light 1s ease-in infinite alternate;
+    -o-animation:view-light 1s ease-in infinite alternate;
+}
+@keyframes view-light {
+    from{text-shadow: 0 0 2px #ffffff;}
+    to{text-shadow: 0 0 6px #ffffff;}
+}
+@-webkit-keyframes view-light {
+    from{text-shadow: 0 0 2px #ffffff;}
+    to{text-shadow: 0 0 6px #ffffff;}
+}
+@-moz-keyframes view-light {
+    from{text-shadow: 0 0 2px #ffffff;}
+    to{text-shadow: 0 0 6px #ffffff;}
+}
+@-o-keyframes view-light {
+    from{text-shadow: 0 0 2px #ffffff;}
+    to{text-shadow: 0 0 6px #ffffff;}
+}
+</style>
+
+

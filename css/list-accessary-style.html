@@ -1,0 +1,59 @@
+<style>
+    .accessarys {
+        padding: 5px;
+    }
+    .accessarys .item  {
+        padding: 10px;
+        padding-bottom: 14px;
+        margin-bottom: 16px;
+        position: relative;
+    }
+    .accessarys .item .name {
+        font-size:20px;
+        font-weight: bold;
+    }
+    .accessarys .item .price,.accessarys .item .unit {
+        color:#777777;
+        font-size: 14px
+    }
+    .accessarys .item .des {
+        overflow: hidden;
+    }
+    .accessarys .item .des ol,.accessarys .item .des ul{
+        padding-left: 20px;
+    }
+    .accessarys .item .des.excerpt {
+        height: 60px;
+    }
+    .accessarys .item .details {
+        margin-top: 5px;
+        font-size: 22px;
+        cursor: pointer;
+        color:#39c;
+        position: absolute;
+        left:10px;
+        bottom: -18px;
+    }
+    .accessarys .item .des + .details .glyphicon-plus {
+        display: none;
+    }
+    .accessarys .item .des.excerpt + .details .glyphicon-plus {
+        display: block !important;
+    }
+    .accessarys .item .des.excerpt + .details .glyphicon-minus {
+        display: none !important;
+    }
+
+
+    .accessarys p.read-more {
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        background: #fff;
+        border-top: 1px solid rgba(128, 128, 128, 0.29);
+    }
+
+    .accessarys p.read-more:hover {
+        background: #dbf4ff;
+    }
+</style>

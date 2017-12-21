@@ -1,0 +1,31 @@
+<script>
+    $(function () {
+
+         $('.submit-form').submit(function (e) {
+             e.preventDefault();
+             var controller = $(this).data('controller');
+             var action = $(this).data('action');
+             var method = this.method;
+         /*    var par =$(this).serialize().split("&");
+             var pars={};
+             for(var i=0;i<par.length;i++){
+                 var s =par[i].split("=");
+                 pars[s[0]] = s[1];
+             }
+           alert($(this).serialize());*/
+            $.ajax({
+                 type:method,
+                 url:'config/request.php',
+                 data:getPostRequest(controller,action,$(this).serialize()),
+                 success:function (res) {
+                   //alert(res);
+                    res = JSON.parse(res);
+                     alert(res.ms);
+                     if(res.suc){
+                         location.href ="admin/";
+                     }
+                 }
+             });
+         });
+    });
+</script>

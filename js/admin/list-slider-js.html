@@ -1,0 +1,31 @@
+<script>
+    app.controller("list-slider", function ($scope, $http) {
+
+        new getList("admin", "get_list_slider", "list_slider").action = function (res) {
+          //  alert(res.data);
+            $('.save-slider').click(function () {
+                var urls=[];
+                $('.list-slider .pic-url').each(function () {
+                    var id = $(this).data('id');
+                    var url = $(this).val();
+                    urls.push({
+                        'url':url,
+                        'id':id,
+                    });
+                });
+
+                $.ajax({
+                    type:'post',
+                    url:'config/request.php',
+                    data:getPostRequest('admin','modified_slider',"p="+JSON.stringify(urls)),
+                    success:function (res) {
+                        //console.log(res)
+                        location.href=location.href;
+                    }
+                })
+            });
+        };
+
+    });
+
+</script>

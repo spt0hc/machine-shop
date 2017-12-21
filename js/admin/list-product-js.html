@@ -1,0 +1,58 @@
+<script>
+    app.controller("list-products", function ($scope, $http) {
+
+        new getList("admin", "list_products", "list_products", 1).action = function (res) {
+          //  console.log(res.data);
+            $scope.pages = [];
+            for (var i = res.data.total_page; i > 0; i--) {
+                $scope.pages.push(i);
+            }
+        };
+        $scope.formatMoney = function(x){
+            return formatMoney(x);
+        };
+        new getList("admin", "list_cats_sel", "cats", 1);
+
+        $('body').on('click', '.list-product-content .pagination a', function (e) {
+            e.preventDefault();
+            var page = parseInt($(this).text());
+            new getList("admin", "list_products", "list_products", page).action = function (res) {
+                //   console.log(res.data.total_page);
+                $scope.pages = [];
+                for (var i = res.data.total_page; i > 0; i--) {
+                    $scope.pages.push(i);
+                }
+
+                function active(is) {
+                    return is === 1 ? 'checked' : '';
+                }
+
+            };
+        });
+        $('body').on('click', '.list-product-content .set-active', function () {
+            var flag = $(this);
+            var is_active = $(this).data('checked');
+            var flag_str_add = "",flag_str_remove="";
+            if (is_active == 0) {
+                is_active = '1';
+                flag_str_add = "ok";
+                flag_str_remove = "remove";
+            } else {
+                is_active = '0';
+                flag_str_add = "remove";
+                flag_str_remove = "ok";
+            }
+            var row = $(this).parents("tr");
+            var id = $(row).data('id');
+            new getList("admin", "set_active_product", "", JSON.stringify({
+                id: id,
+                ac: is_active
+            })).action = function (res) {
+                this.igrone=true;
+               flag.removeClass("glyphicon-"+flag_str_remove);
+               flag.addClass("glyphicon-"+flag_str_add);
+            };
+        });
+    });
+
+</script>

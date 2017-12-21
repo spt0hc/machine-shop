@@ -1,0 +1,36 @@
+<style>
+    .admin-container {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+
+    }
+    .admin-container .content {
+        padding: 10px;
+    }
+    .admin-container .content .nav-link{
+        font-size: 26px;
+        border-bottom: 1px solid rgba(196,196,196,0.63);
+    }
+    .admin-container .content .nav-link a{
+        color: #ff4040;
+        text-decoration: none;
+    }
+    .admin-container .content .nav-link a:hover {
+        color:#fda0a0;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .admin-container > .row > div:first-child {
+            background: #313332;
+        }
+        .admin-container > .row.row-eq-height{
+            display: flex;
+            flex-direction: row;
+        }
+        .admin-container > .row > div:not(.clearfix){
+            flex: 1 1 auto;
+        }
+    }
+
+</style>

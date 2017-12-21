@@ -1,0 +1,15 @@
+Options -Indexes
+
+<FilesMatch "config\.php|connection\.php">
+Order Deny,Allow
+   deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule trang-chu.html index.php
+RewriteRule trang-chu-(.*)-([0-9]*).html index.php?cat=$2
+RewriteRule san-pham-(.*)-([0-9]*).html single.php?id=$2
+RewriteRule dich-vu-(.*)-([0-9]*).html service.php?id=$2
+RewriteRule phu-tung/bang-bao-gia.html price.php
+RewriteRule chuong-trinh-khuyen-mai.html promotional.php
+RewriteRule gioi-thieu.html about.php

@@ -1,0 +1,29 @@
+<script>
+    app.controller("list_cats", function ($scope, $http) {
+
+        new getList("admin", "list_cats", "list_cats", 1).action = function (res) {
+          //console.log(res.data);
+            $scope.pages = [];
+            for (var i = res.data.total_page; i > 0; i--) {
+                $scope.pages.push(i);
+            }
+        };
+        $('body').on('click', '.list-cat-content .pagination a', function (e) {
+            e.preventDefault();
+            var page = parseInt($(this).text());
+            new getList("admin", "list_cats", "list_cats", page).action = function (res) {
+                //   console.log(res.data.total_page);
+                $scope.pages = [];
+                for (var i = res.data.total_page; i > 0; i--) {
+                    $scope.pages.push(i);
+                }
+
+                function active(is) {
+                    return is === 1 ? 'checked' : '';
+                }
+
+            };
+        });
+    });
+
+</script>

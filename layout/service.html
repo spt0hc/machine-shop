@@ -1,0 +1,35 @@
+<div class="service soft-box" ng-controller="service-details">
+            <div class="col-xs-12 col-sm-6">
+                <div class="intro">
+                    <P> {{service.warning()}}</P>
+
+                    <p class="name">{{service.name}}</p>
+                    <p class="price">
+                    <span style="font-style: italic;font-size: 14px;color:#FF4040;">   Liên hệ {{shop_info.phone}}</span>
+                        <br/>
+                   <!--     <span class="glyphicon glyphicon-usd"></span>-->
+                        <!-- <span
+                            class="sale-off">- 10%</span>--></p>
+<!--
+                    <p class="price-off"><span class=>Còn </span>1.800.000 VNĐ</p>
+-->
+                    <div class="des">
+                        <p ng-bind-html="service.des | rawHtml"></p>
+                    </div>
+
+                </div>
+                <div class="other-pics">
+                    <div class="wrap" style="width:{{service.width_wrap}}px;">
+                        <div ng-repeat="item in service.photos">
+                            <img src="{{item.url}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="large-pic">
+                    <img src="{{service.photos[0].url}}" alt="">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+</div>

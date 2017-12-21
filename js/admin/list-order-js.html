@@ -1,0 +1,49 @@
+<script>
+    app.controller("list-order", function ($scope, $http) {
+
+        function getOrders(page) {
+            new getList("admin", "get_list_order", "list_order", page).action = function (res) {
+                //  console.log(res.data);
+                $scope.pages = [];
+                for (var i = res.data.total_page; i > 0; i--) {
+                    $scope.pages.push(i);
+                }
+            };
+        }
+        getOrders(1);
+        $scope.checkSubmit = function(x){
+            return x == 0 ? 'Chưa xử lý': 'Đã xử lý';
+        };
+
+      $('body').on('click', '.list-order-content .pagination a', function (e) {
+            e.preventDefault();
+            var page = parseInt($(this).text());
+            getOrders(page);
+        });
+        $('body').on('click', '.submit-order', function (e) {
+            var td = $(this);
+            var stt = $(this).data('stt');
+            var id = $(this).data('id');
+            if(stt === 1){
+                alert('Đã xử lý rồi');
+            }else {
+                $.ajax({
+                    url:'config/request.php',
+                    data:getPostRequest("admin","submit_order","&id="+id),
+                    type:'post',
+                    success:function (res) {
+                        var dt = JSON.parse(res);
+                        alert(dt.ms);
+                        if(dt.suc){
+                            td.text('Đã xử lý');
+                        }
+                    },
+                    error:function () {
+                        alert('Xảy ra lỗi');
+                    }
+                });
+            }
+        });
+    });
+
+</script>

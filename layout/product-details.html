@@ -1,0 +1,50 @@
+<div class="product-details soft-box" ng-controller="product-details">
+    <div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="intro">
+                <P> {{product.warning()}}</P>
+
+                <p class="name">{{product.name}}</p>
+                <p class="price"><span class="glyphicon glyphicon-usd"></span>{{product.price}} VNĐ <span
+                        class="sale-off"> {{product.price_off}}%</span></p>
+                <p class="price-off"><span class=>Còn </span>{{product.pri}} VNĐ</p>
+                <div class="des">
+                    <p ng-bind-html="product.des | rawHtml"></p>
+                </div>
+                <div class="add-cart ">
+                    <P data-id="{{product.id}}" CLASS="btn-add-cart">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </P>
+                    <div class="input-group">
+                        <span class="btn-add-cart-label input-group-addon">
+                        Đặt
+                        </span>
+                        <select CLASS="form-control edit-amount details" name="" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="other-pics">
+                <div class="wrap" style="width:{{product.width_wrap}}px;">
+                    <div ng-repeat="item in product.photos">
+                        <img src="{{item.url}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="large-pic">
+                <img src="{{product.photos[0].url}}" alt="">
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+</div>
