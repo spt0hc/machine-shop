@@ -16,17 +16,9 @@ include $__ROOT_DIR . 'web-config.php'; ?>
     </script>
 
      <!--SEO-->
-    <meta name="description" content="Với 10 năm kinh nghiệm trong ngành cơ điện lạnh, ĐIỆN LẠNH THÚC TUYỀN đã cung cấp hầu hết dịch vụ vệ sinh , sữa chữa , tháo lắp , thay phụ kiện máy lạnh , đồ điện lạnh gia dụng cho các hộ gia đình, tòa nhà, văn phòng công ty … Cụ thể hóa bằng việc sữa chữa , lắp đặt theo yêu cầu của quý khách hàng với mức giá rẻ và có thời hạn bảo hành dài hạn. ĐIỆN LẠNH THÚC TUYỀN chuyên cung cấp: 
-
-- Thiết kế - Thi công
-
-- Lắp đặt - Bảo trì
-
-- Hệ thống lạnh dân dụng
-
-- Hỗ trợ tư vấn">
+    <meta name="description" content="Với 10 năm kinh nghiệm trong ngành cơ điện lạnh, ĐIỆN LẠNH THÚC TUYỀN đã cung cấp hầu hết dịch vụ vệ sinh , sữa chữa , tháo lắp , thay phụ kiện máy lạnh , đồ điện lạnh gia dụng cho các hộ gia đình, tòa nhà, văn phòng công ty … Cụ thể hóa bằng việc sữa chữa , lắp đặt theo yêu cầu của quý khách hàng với mức giá rẻ và có thời hạn bảo hành dài hạn. ĐIỆN LẠNH THÚC TUYỀN chuyên cung cấp: - Thiết kế - Thi công- Lắp đặt - Bảo trì- Hệ thống lạnh dân dụng- Hỗ trợ tư vấn">
     <meta name="Abstract" content="Dịch vụ sửa chữ">
-    <meta name="Author" content="Dịch vụ sửa chữa">
+    <meta name="Author" content="Dịch vụ sửa chữa mộng tuyền">
     <?php
       $keywords='điện lạnh,điện lạnh mộng tuyền,máy lạnh,máy lạnh mộng tuyền,dịch vụ,dịch vụ mộng tuyền,sửa chữa,sửa chữa mộng tuyền,khuyến mãi,điện máy lạnh khuyến mãi,điện máy lạnh,điện máy lạnh mộng tuyền';
       $keywords .=",".removeUnicode($keywords);
