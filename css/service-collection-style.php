@@ -13,16 +13,15 @@
         padding:0;
         width: 220px;
         height: 280px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
         overflow: hidden;
         position: relative;
-        margin-top: 14px;
+        margin-top: 40px;
         border-top: 6px solid #39c;
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
-        box-shadow: 0 0 2px 2px rgba(80, 80, 80, 0.23);
+        border-radius: 3px;
+        box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
         background: #267399;
-
     }
 
     .service-collection .wrap-item .thumbnails {
@@ -43,4 +42,5 @@
         color: white;
         text-align: center;
     }
+
 </style>

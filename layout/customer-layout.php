@@ -1,8 +1,8 @@
 <?php
-$__ROOT_DIR='';
-$id_popups[] =[
-    "id"=>"shop-cart",
-    "render"=>function(){
+$__ROOT_DIR = '';
+$id_popups[] = [
+    "id" => "shop-cart",
+    "render" => function () {
         include 'layout/shopping-cart.html';
     }
 ];
@@ -14,24 +14,25 @@ $heads[] = function () {
     include 'css/service-collection-style.php';
     include 'css/shopping-cart-style.html';
     include 'css/product-item-style.html';
-   include 'js/render-product-js.php';
+    include 'js/render-product-js.php';
     //scroll top
     echo "
     <style>
     .scroll-top {
         position:fixed;
-        bottom: 10px;
-        right: 10px;
+        bottom: 40px;
+        right: 28px;
         z-index: 9999;
-        background: #39c;
+        background: #fff;
         width:40px;
         height:40px;
-        color:#fff;
+        color:#3399cc;
         text-align: center;
         line-height: 40px;
         font-size:20px;
         border-radius:100%;
         cursor: pointer;
+        box-shadow: 0 1px 2px 1px rgba(128,128,128,0.32);
     }
     </style>
     ";

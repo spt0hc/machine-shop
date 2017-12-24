@@ -14,18 +14,165 @@
         width: 300px;
         margin: 0 auto;
         text-align: center;
-        color:#ff4040;
+        color: #ff4040;
     }
 
     .list-products p.read-more {
         text-align: center;
-        padding: 10px;
+        padding: 5px;
         cursor: pointer;
-        background: #fff;
-        border-top: 1px solid rgba(128, 128, 128, 0.29);
+        background: #4094f1;
+        color: #fff;
+        border-top: 2px solid transparent;
     }
 
     .list-products p.read-more:hover {
-        background: #dbf4ff;
+        border-top: 2px solid #ff4040;
+    }
+
+    .list-products p.read-more .loading-dot {
+        font-size: 30px;
+        visibility: hidden;
+    }
+
+    .list-products p.read-more:hover .loading-dot {
+        visibility: visible;
+    }
+
+    .list-products p.read-more .loading-dot:nth-child(1) {
+        animation: dot1 2s linear infinite alternate;
+        -webkit-animation: dot1 2s linear infinite alternate;
+        -moz-animation: dot1 2s linear infinite alternate;
+        -o-animation: dot1 2s linear infinite alternate;
+    }
+
+    @keyframes dot1 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    @-webkit-keyframes dot1 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    @-moz-keyframes dot1 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    @-o-keyframes dot1 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    .list-products p.read-more .loading-dot:nth-child(2) {
+        animation: dot2 2s linear infinite alternate;
+        animation-duration: 2s;
+        -webkit-animation: dot2 2s linear infinite alternate;
+        -webkit-animation-duration: 2s;
+        -moz-animation: dot2 2s linear infinite alternate;
+        -moz-animation-duration: 2s;
+        -o-animation: dot2 2s linear infinite alternate;
+        -o-animation-duration: 2s;
+    }
+
+    @keyframes dot2 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    @-webkit-keyframes dot2 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    @-moz-keyframes dot2 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    @-o-keyframes dot2 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    .list-products p.read-more .loading-dot:nth-child(3) {
+        animation: dot3 2s linear infinite alternate;
+        animation-duration: 4s;
+        -webkit-animation: dot3 2s linear infinite alternate;
+        -webkit-animation-duration: 4s;
+        -moz-animation: dot3 2s linear infinite alternate;
+        -moz-animation-duration: 4s;
+        -o-animation: dot3 2s linear infinite alternate;
+        -o-animation-duration: 4s;
+    }
+
+    @keyframes dot3 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    @-webkit-keyframes dot3 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    @-moz-keyframes dot3 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
+    }
+
+    @-o-keyframes dot3 {
+        from {
+            color: #fff
+        }
+        to {
+            color: #ff4040
+        }
     }
 </style>
