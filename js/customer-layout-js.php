@@ -104,10 +104,6 @@
             setCookie("CARTS", carts);
             showCarts();
 
-            //location.href=location.href;
-            /* //console.log(res.data);
-            // console.log($scope.carts);
-*/
           }
         }
       };

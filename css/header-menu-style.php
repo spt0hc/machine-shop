@@ -80,15 +80,19 @@
         color:#fff;
     }
     .cus-carts {
-        COLOR:#39c;
+        color:#39c;
         margin-top: 10px;
         font-size: 20px;
-        CURSOR:pointer;
+        cursor:pointer;
         margin-right: 10px;
         position: fixed;
-        bottom: 60px;
+        bottom: 120px;
         right: 20px;
         z-index: 9999;
+        background: #fff;
+        box-shadow: 0 1px 1px 1px rgba(128,128,128,0.32);
+        padding: 6px;
+        border-radius: 4px;
     }
     .cus-carts span  {
         transform: scaleX(-1);
