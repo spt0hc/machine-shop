@@ -1,8 +1,11 @@
 ﻿#Modified 
-- css/header-menu-style.php
-- css/style.css
-- layout/service-collection.php
-- layout/customer-layout.php
-- layout/list-products.html
-- css/service-collection-style.php
-- css/list-products-style.html
+- .htaccess
+- controller/admin.php
+- controller/home.php
+- js/customer-layout-js.php
+- layout/header-menu.html
+#Add
+- services.php
+- layout/list-services.html
+- js/list-services-js.php
+- css/list-services-style.html

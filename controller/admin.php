@@ -1,16 +1,8 @@
 <?php
-/*
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-//Load composer's autoloader
-require '../vendor/autoload.php';*/
-
 include 'controller.php';
 
 class admin extends controller
 {
-
     public function get_exit()
     {
         session_start();

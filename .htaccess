@@ -13,3 +13,4 @@ RewriteRule dich-vu-(.*)-([0-9]*).html service.php?id=$2
 RewriteRule phu-tung/bang-bao-gia.html price.php
 RewriteRule chuong-trinh-khuyen-mai.html promotional.php
 RewriteRule gioi-thieu.html about.php
+RewriteRule danh-sach-dich-vu.html services.php

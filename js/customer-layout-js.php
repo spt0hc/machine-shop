@@ -198,7 +198,7 @@
       document.title = res.data.title_on_tab;
     };
     getList("home", "categories", "categories");
-    getList("home", "services", "services");
+    getList("home", "four_services", "services");
     new getList("home", "new_products", "new_products", 4).action = function (res) {
       var dt = res.data;
       // alert(JSON.stringify(dt));

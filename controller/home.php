@@ -30,23 +30,21 @@ class home extends controller
 
     public function get_services()
     {
-        //  ini_set('display_errors', 1);
         echo json_encode($this->DB["service"]->gets());
+    }
+    public function get_four_services()
+    {
+        echo json_encode($this->DB["service"]->gets_page(1,4));
     }
 
     public function get_new_products()
     {
-        //    error_reporting(E_ALL);
-// ini_set('display_errors', 1); 
         $row = $this->par;
         echo json_encode($this->DB["product"]->get_by_order_limit("date", "DESC", $row));
     }
 
     public function get_list_products()
     {
-        //     error_reporting(E_ALL);
-        //ini_set('display_errors', 1);
-
         $page = $this->par;
         echo json_encode($this->DB["product"]->gets_page($page, 8));
     }
